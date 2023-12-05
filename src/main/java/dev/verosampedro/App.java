@@ -1,17 +1,24 @@
 package dev.verosampedro;
 
-/**
- * Hello world!
- */
-public final class App {
-    private App() {
-    }
+import java.util.Scanner;
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
+public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Peso en kilogramos: ");
+        double peso = scanner.nextDouble();
+
+        System.out.print("Estatura en metros: ");
+        double estatura = scanner.nextDouble();
+
+        Persona persona = new Persona(peso, estatura);
+        double imc = CalculadoraIMC.calcularIMC(persona);
+
+        System.out.println("El IMC es: " + imc);
+
+        EstadoPersona.interpretarIMC(imc);
+
+        scanner.close();
     }
 }

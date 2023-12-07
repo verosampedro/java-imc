@@ -9,7 +9,7 @@ public class App {
         System.out.print("Peso en kilogramos: ");
         double peso = scanner.nextDouble();
 
-        System.out.print("Estatura en metros: ");
+        System.out.print("Estatura en metros(ejemplo: 1,70): ");
         double estatura = scanner.nextDouble();
 
         Persona persona = new Persona(peso, estatura);
